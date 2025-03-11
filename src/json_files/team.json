@@ -1,0 +1,50 @@
+{
+  "engineers": {
+    "Erfan_Zahra": {
+      "name": "Erfan Zahra",
+      "position": "FabLab Engineer",
+      "selfImg": "Erfan_Zahra.png",
+      "socialMedia": {
+        "linkedin": "",
+        "facebook": ""
+      }
+    }
+  },
+  "members": {
+    "Saif_Abdelrazek": {
+      "name": "Saif Abdelrazek",
+      "position": "Software Instructor & Web Developer",
+      "selfImg": "SaifAbdelrazek.jpg",
+      "socialMedia": {
+        "linkedin": "http://www.linkedin.com/in/saif-abdelrazek-6437b1280",
+        "github": "https://github.com/SaifAbdelrazek011"
+      }
+    },
+    "Abdelfattah_Rizk": {
+      "name": "Abdelfattah Rizk",
+      "position": "Hardware Instructor",
+      "selfImg": "Abdelfattah_Rizk.jpg",
+      "socialMedia": {
+        "linkedin": "https://www.linkedin.com/in/abdelfattah-kamel-915b93343",
+        "instagram": "https://www.instagram.com/_te7a_3/"
+      }
+    },
+    "Abdelfattah_Rizk2": {
+      "name": "Abdelfattah Rizk",
+      "position": "Hardware Instructor",
+      "selfImg": "Abdelfattah_Rizk.jpg",
+      "socialMedia": {
+        "linkedin": "https://www.linkedin.com/in/abdelfattah-kamel-915b93343",
+        "instagram": "https://www.instagram.com/_te7a_3/"
+      }
+    },
+    "Mostafa_Abdelkader": {
+      "name": "Mostafa Abdelkader",
+      "position": "Devices Manager",
+      "selfImg": "Mostafa_Abdelkader.jpg",
+      "socialMedia": {
+        "linkedin": "https://www.linkedin.com/in/mostafa-abdelkader-b9a847353"
+      }
+    }
+  }
+}

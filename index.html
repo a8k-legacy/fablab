@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="src/imgs/fablab-logo.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="src/styles/main.css" />
+
+    <title>Gharbiya STEM FabLab Team</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container" id="nav">
+        <a href="#home" class="nav__logo">
+          <img src="/src/imgs/fablab-logo.png" alt="FabLab Logo" />
+          Gharbiya FabLab Team
+        </a>
+
+        <div class="nav__list" id="nav-list">
+          <ul class="nav__items" id="nav-items">
+            <li>
+              <a class="nav__link" href="#home">Home</a>
+            </li>
+            <li>
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li>
+              <a class="nav__link" href="#team">Team</a>
+            </li>
+            <li>
+              <a class="nav__link" href="#documentation">Documentation</a>
+            </li>
+            <li>
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <!-- Close Button-->
+          <div class="nav__close" id="nav-close">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- Toggle Button-->
+        <div class="nav__toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1>Gharbiya FabLab Team</h1>
+            <p>Working for helping +300 students in their projects</p>
+            <a href="#about">
+              <button class="button">More About</button>
+            </a>
+          </div>
+          <div class="home__images">
+            <img
+              src="src/imgs/fablab-logo.png"
+              alt="FabLab Home logo"
+              class="home__logo rotate-fade"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__imgs">
+            <img
+              src="/src/imgs/about-section-img.png"
+              alt="3d printer image in about section"
+              class="about__img"
+            />
+          </div>
+          <div class="about__data">
+            <div class="about__content">
+              <h1 class="about__heading">About Us
+              </h1>
+              <h3 class="about__paragraph">
+                A FabLab (short for Fabrication Laboratory) is a community
+                workspace that provides access to tools, machines, and resources
+                for digital fabrication, prototyping, and hands-on learning.
+                It’s a space where anyone (students, entrepreneurs, artists,
+                hobbyists, etc.) can turn ideas into physical objects using
+                advanced technologies like 3D printers, laser cutters, CNC
+                machines, and more.
+              </h3>
+              <button class="button about__button" id="fablab-info-btn">Show Info</button>
+            </div>
+          </div>
+
+      </section>
+      <div class="popup__overlay dnone" id="popup-overlay">
+
+        <div class="fablab__info__popup " id="fablab-info-popup">
+          <div class="popup__close" id="popup-close">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="content">
+            <div class="popup__section">
+              <h2>What is a FabLab?</h2>
+              <p>A FabLab (short for Fabrication Laboratory) is a community workspace that provides access to tools, machines, and resources for:</p>
+              <ul>
+                  <li>Digital fabrication</li>
+                  <li>Prototyping</li>
+                  <li>Hands-on learning</li>
+              </ul>
+          </div>
+      
+          <div class="popup__section">
+              <h2>Key Features</h2>
+              <ul>
+                  <li><span class="highlight">Open Access:</span> Public/community use (often low-cost/free)</li>
+                  <li><span class="highlight">Digital Fabrication Tools:</span>
+                      <ul>
+                          <li>3D printers</li>
+                          <li>Laser cutters/engravers</li>
+                          <li>CNC machines (wood/metal/plastic)</li>
+                          <li>Vinyl cutters</li>
+                          <li>Electronics workstations (Arduino/Raspberry Pi)</li>
+                          <li>Soldering & PCB-making tools</li>
+                      </ul>
+                  </li>
+                  <li><span class="highlight">Software:</span> CAD/CAM design tools (Fusion 360, Tinkercad, Inkscape)</li>
+                  <li><span class="highlight">Learning Focus:</span> Workshops, tutorials, mentorship</li>
+                  <li><span class="highlight">Collaboration:</span> Shared workspace for idea exchange</li>
+              </ul>
+          </div>
+      
+          <div class="popup__section">
+              <h2>Origins & Purpose</h2>
+              <ul>
+                  <li>Founded by Neil Gershenfeld at MIT's Center for Bits and Atoms (2000s)</li>
+                  <li>Originated from course "How To Make (Almost) Anything"</li>
+                  <li><span class="highlight">Core Purposes:</span>
+                      <ul>
+                          <li>Democratize technology access</li>
+                          <li>Encourage innovation through rapid prototyping</li>
+                          <li>Promote sustainable practices</li>
+                          <li>Build creator communities</li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      
+          <div class="popup__section">
+              <h2>FabLab Activities</h2>
+              <ul>
+                  <li>Prototype development</li>
+                  <li>Custom design & fabrication (jewelry, furniture, art)</li>
+                  <li>Robotics/IoT device creation</li>
+                  <li>Technical skill development (coding, electronics)</li>
+                  <li>Equipment repair/modification</li>
+              </ul>
+          </div>
+      
+          <div class="popup__section">
+              <h2>Global Network</h2>
+              <ul>
+                  <li>2,000+ labs worldwide</li>
+                  <li>Governed by Fab Charter principles</li>
+                  <li>Open-source knowledge sharing</li>
+                  <li>Global collaboration platform</li>
+              </ul>
+              <p>Explore the network: <a href="https://fabfoundation.org" target="_blank" class="fab__foundation__link">Fab Foundation Website</a></p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!--==================== TEAM ====================-->
+      <section class="team section" id="team">
+
+        <div class="heading__contianer">
+          <h1 class="team__heading section__title">Our Team</h1>
+        </div>
+        <div class="cards__container grid">
+          <div class="team__grid grid" id="teammembers-container">
+          </div>
+          
+        </div>
+        <div class="fablab__engineer" id="engineer-container">
+          <div class="heading__contianer">
+            <h1 class="team__heading section__title">Supervisor</h1>
+          </div>
+          <div class="engineer__card" id="engineer-card">
+          </div>
+        </div>
+    
+        </div>
+      </section>
+
+      <!--==================== PRODUCTS ====================-->
+      <section class="documentation section" id="documentation">
+        <div class="button showmore_documentations"> <a href="src/pages/documentation.html"> Show more</a></div>
+            <div class="heading__contianer">
+          <h1 class="documentation__heading section__title">Documentations</h1>
+          <div class="doc__cards__container" id="docs-cards-container">
+
+
+          </div>
+        </div>    
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact"></section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer"></footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="src/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="src/js/marked.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script type="module" src="src/js/main.js"></script>
+
+  </body>
+</html>
+
+

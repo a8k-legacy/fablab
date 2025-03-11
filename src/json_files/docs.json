@@ -1,0 +1,172 @@
+{
+  "challenges": {
+    "android1": {
+      "id": "android1-100001",
+      "title": "Android 1 Guide",
+      "source": "challenges/android1"
+    },
+    "android2": {
+      "id": "android2-100002",
+      "title": "Android 2 Guide",
+      "source": "challenges/android2"
+    },
+    "android3": {
+      "id": "android3-100003",
+      "title": "Android 3 Guide",
+      "source": "challenges/android3"
+    },
+    "avr": {
+      "id": "avr-100004",
+      "title": "AVR Documentation",
+      "source": "challenges/avr"
+    },
+    "boards": {
+      "id": "boards-100005",
+      "title": "Boards Documentation",
+      "source": "challenges/boards"
+    },
+    "gohugo": {
+      "id": "gohugo-100006",
+      "title": "GoHugo Guide",
+      "source": "challenges/gohugo"
+    },
+    "jekyll": {
+      "id": "jekyll-100007",
+      "title": "Jekyll Guide",
+      "source": "challenges/jekyll"
+    },
+    "mkdocs": {
+      "id": "mkdocs-100008",
+      "title": "MkDocs Guide",
+      "source": "challenges/mkdocs"
+    },
+    "mob_app": {
+      "id": "mob_app-100009",
+      "title": "Mobile App Guide",
+      "source": "challenges/mob-app"
+    },
+    "new_challenge": {
+      "id": "new_challenge-100010",
+      "title": "New Challenge",
+      "source": "challenges/new-challenge"
+    },
+    "pandoc": {
+      "id": "pandoc-100011",
+      "title": "Pandoc Documentation",
+      "source": "challenges/pandoc"
+    },
+    "web_app": {
+      "id": "web_app-100012",
+      "title": "Web App Guide",
+      "source": "challenges/web-app"
+    }
+  },
+  "inventory": {
+    "components": {
+      "id": "components-100013",
+      "title": "Components Inventory",
+      "source": "inventory/components"
+    },
+    "inventory": {
+      "id": "inventory-100014",
+      "title": "General Inventory",
+      "source": "inventory/inventory"
+    },
+    "machine_inventory": {
+      "id": "machine_inventory-100015",
+      "title": "Machine Inventory",
+      "source": "inventory/machine-inventory"
+    },
+    "materials_inventory": {
+      "id": "materials_inventory-100016",
+      "title": "Materials Inventory",
+      "source": "inventory/materials-inventory"
+    },
+    "tools_inventory": {
+      "id": "tools_inventory-100017",
+      "title": "Tools Inventory",
+      "source": "inventory/tools-inventory"
+    }
+  },
+  "machines": {
+    "3d_printer": {
+      "id": "3d_printer-100018",
+      "title": "3D Printer Guide",
+      "source": "machines/3d-printer"
+    },
+    "laser_cutter": {
+      "id": "laser_cutter-100019",
+      "title": "Laser Cutter Guide",
+      "source": "machines/laser-cutter"
+    },
+    "monofab": {
+      "id": "monofab-100020",
+      "title": "Monofab Machine Guide",
+      "source": "machines/monofab"
+    },
+    "shopbot": {
+      "id": "shopbot-100021",
+      "title": "ShopBot Guide",
+      "source": "machines/shopbot"
+    },
+    "vinyl_cutter": {
+      "id": "vinyl_cutter-100022",
+      "title": "Vinyl Cutter Guide",
+      "source": "machines/vinyl-cutter"
+    }
+  },
+  "team": {
+    "boys_doc": {
+      "id": "boys_doc-100023",
+      "title": "Boys' Team Doc",
+      "source": "team/boys-doc"
+    },
+    "fablab_team1": {
+      "id": "fablab_team1-100024",
+      "title": "FabLab Team 1",
+      "source": "team/fablab-team1"
+    },
+    "fablab_team2": {
+      "id": "fablab_team2-100025",
+      "title": "FabLab Team 2",
+      "source": "team/fablab-team2"
+    },
+    "fablab_team3": {
+      "id": "fablab_team3-100026",
+      "title": "FabLab Team 3",
+      "source": "team/fablab-team3"
+    },
+    "girls_doc": {
+      "id": "girls_doc-100027",
+      "title": "Girls' Team Doc",
+      "source": "team/girls-doc"
+    }
+  },
+  "more-other": {
+    "fablab_info": {
+      "id": "fablab_info-100028",
+      "title": "FabLab General Info",
+      "source": "fablab-info"
+    },
+    "freecad": {
+      "id": "freecad-100029",
+      "title": "FreeCAD Guide",
+      "source": "freecad"
+    },
+    "machine_software": {
+      "id": "machine_software-100030",
+      "title": "Machine Software Guide",
+      "source": "machine-software"
+    },
+    "machine": {
+      "id": "machine-100031",
+      "title": "Machine Overview",
+      "source": "machine"
+    },
+    "software": {
+      "id": "software-100032",
+      "title": "Software Overview",
+      "source": "software"
+    }
+  }
+}

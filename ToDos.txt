@@ -1,0 +1,10 @@
+User Stories:
+	1- I am a user and want to know more about the team
+	2- I am a user and want to learn more about the Fablab tools
+	3- I am a user and want to know what is the meaning of fab lab
+	4- I am an editor and want to add documentation without any programming knowledge
+	5- I want to change between dark and light themes
+	6-
+
+To-do: 
+	1- Ensure that all photos in team take the same dimensions	

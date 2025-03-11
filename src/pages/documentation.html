@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div class="docs__page__container">
+      <!-- Sidebar -->
+      <div class="docs__page__sidebar">
+        <a class="return__button" href="/index.html"
+          ><button aria-hidden="true">⬅</button></a
+        >
+
+        <h2>Docs</h2>
+        <ul id="docs-page-links"></ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="docs__page__content" id="docs-page-content">
+        <h1 class="docs__page__content__heading">Documentation</h1>
+        <div class="doc__page__content" id="doc-page-content">
+          Select a topic from the sidebar.
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/js/marked.min.js"></script>
+    <script type="module" src="/src/js/docs.js"></script>
+  </body>
+</html>

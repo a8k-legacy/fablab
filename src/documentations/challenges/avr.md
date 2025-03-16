@@ -28,13 +28,13 @@
     - MISO (Maser in Slave out)
     - MOSI (Master out slave in)
     - RESET (tell the AVR to enter programming mode)
-    - ![isp](/src/imgs/documontations/challenges//isp.png)
+    - ![isp](/src/imgs/documontations/challenges/isp.png)
 - Software
 
   - Arduino ISP example, flash it to arduino
   - `avrdude -p atmega168 -c avrisp -b 19200 -p /dev/ttyACM0 -nv`
   - if it runs it will give info about board, if not recheck connections
-  - ![arduino](arduino.png)
+  - ![arduino](/src/imgs/documontations/challenges/arduino.png)
   - make file
     - to setup the make file i have to define
       - target MCU
@@ -241,8 +241,8 @@
     - He writes down his eight bits, 01010000.
     - He then flips the bit-ordering around, and sees that Alice has sent the number 10!
     - The oscilloscope trace is a real example of an AVR transmitting the digit 10 to my computer.
-    - ![osc](osc.png)
-    - ![osc2](osc2.png)
+    - ![osc](/src/imgs/documontations/challenges/osc.png)
+    - ![osc2](/src/imgs/documontations/challenges/osc2.png)
     - Instead of one bit per second I used 9,600 bits per second (baud), so each bit takes about 104 microseconds.
     - Encoding and decoding this data seems like a lot of work, and getting the timing exactly right to send and receive data at baud rates in the tens of thousands of bits per second is no picnic either. That’s why all of the AVR Mega microcontrollers have at least one dedicated hardware peripheral, called a Universal Synchronous and Asyncronous Receiver and Transmitter (USART) device built in.
     - Connecting your serial adapter to the AVR is as simple as connecting three wires, and the first one’s simple:
@@ -260,12 +260,12 @@
 
   - Push buttons are cheap, ubiquitous, and the natural choice for quick and mostly painless human/AVR interaction.
   - The naïve circuit shown connects one end of the pushbutton to ground and the other end to the AVR That way, whenever you press the button the AVR end is connected to ground, too, so it’s pretty much guaranteed to be at 0 V.
-  - ![push](push-button.png)
+  - ![push](/src/imgs/documontations/challenges/push-button.png)
   - But when you let go of the button (or open the switch), what is the voltage at the AVR end of the switch? Short answer: nobody knows. A wire that’s just dangling in the air, on the unconnected side of a switch, can act as an antenna.
   - The voltage on that wire will wiggle around between high and low logic states at whatever frequency the strongest local radio stations (or even “noisy” electrical appliances) broadcast.
   - Instead of some random value, you want the side of the button that you connect to the AVR to have a nice, defined high voltage level when the button isn’t pressed.
   - But you can’t hook the AVR-side of the button directly to VCC, because if you did, you’d be shorting out the power supply when you pressed the button—hooking VCC up directly to GND is a recipe for disaster. Enter the pull-up resistor
-  - ![pull-up](pull-up.png)
+  - ![pull-up](/src/imgs/documontations/challenges/pull-up.png)
   - Now here’s the cool bit. The AVR chips provide you a built-in pull-up resistor for each pin, and you have the option to activate it for any pin that is in input mode.
   - to set a pin to be input and to enable pull-up resistor of this pin
     - `DDRD &= ~(1 << PD2);`

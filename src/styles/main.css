@@ -726,7 +726,9 @@ img {
   height: 100%;
 }
 .return__button button {
-  padding: 10px;
+  position: fixed;
+  padding: 5px;
+  margin: 5px;
   background-color: var(--first-color);
   color: var(--white-color);
   border-radius: 8px;
@@ -737,7 +739,7 @@ img {
   background: var(--first-color-dark);
   top: 0;
   padding: 20px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .docs__page__sidebar h2 {
@@ -746,9 +748,14 @@ img {
   color: var(--white-color);
 }
 
-.docs__page__sidebar ul {
+.docs__page__sidebar .docs-content-links {
   list-style: none;
   padding: 0;
+  color: var(--white-color);
+  h3 {
+    color: var(--white-color);
+    margin-bottom: 10px;
+  }
 }
 
 .docs__page__sidebar ul li {
@@ -760,19 +767,20 @@ img {
   text-decoration: none;
   display: block;
   padding: 10px;
-  background: var(--first-color);
+  background-color: var(--first-color);
   border-radius: 5px;
+  transition: background-color 0.3 ease;
 }
 
 .docs__page__sidebar ul li a:hover {
-  background: var(--first-color-alt);
+  background-color: var(--first-color-alt);
 }
 
 .docs__page__content {
   flex: 1;
   padding: 20px;
   background: var(--body-color);
-  overflow-y: auto;
+  /* overflow-y: auto; */
   transition: all 0.3s;
   h1.docs__page__content__heading {
     text-align: center;
@@ -780,7 +788,7 @@ img {
   }
 }
 
-.doc__page__content {
+.doc__content {
   background: var(--white-color);
   padding: 20px;
   border-radius: 5px;
@@ -917,5 +925,10 @@ img {
     height: auto;
     display: block;
     margin: 10px 0;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .docs__page__sidebar {
+    display: none;
   }
 }

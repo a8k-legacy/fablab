@@ -69,6 +69,40 @@ export const createDocs = function (cardsContainer, cardInfo) {
   cardsContainer.innerHTML += card;
 };
 
+export const createLinks = function (docsUrls, docsLinkContainer) {
+  // getting content Object from fetched data
+  const contentDocsObject = docsUrls.contentDocs;
+
+  // Loop over the contentDocsObject using keys
+  Object.keys(contentDocsObject).forEach((categryObjKey) => {
+    // Get a the cateogry from content Object
+    const categryObj = contentDocsObject[categryObjKey];
+    // An HTML code with category heading and links for docs
+    const html = `
+    <h3>${categryObjKey} <span></span></h3>
+    
+    <ul id="docs-page-links">
+   ${
+     // Get the doc from the categry for making a link for it in sidebar
+     Object.keys(categryObj)
+       .map((docObjKey) => {
+         const docObj = categryObj[docObjKey];
+
+         return `<li class="doc__link ${docObjKey}">
+      <a  href="#${docObj.id}"
+        >${docObj.title}</a
+      >
+    </li>`;
+       })
+       .join("")
+   }
+             </ul>`;
+
+    // Add the links to the sidebar
+    docsLinkContainer.innerHTML += html;
+  });
+};
+
 async function loadDoc(docsLinksContainer, url) {
   try {
     const response = await fetch(url);
@@ -84,10 +118,11 @@ async function loadDoc(docsLinksContainer, url) {
 
 export const getDocById = function (docsContainer, docsUrl, id) {
   fetchData(docsUrl).then((docsUrls) => {
-    Object.keys(docsUrls).forEach((categryKey) => {
-      const categryObj = docsUrls[categryKey];
-      Object.keys(categryObj).forEach((docKey) => {
-        const docObj = categryObj[docKey];
+    const contentDocsObj = docsUrls.contentDocs;
+    Object.keys(contentDocsObj).forEach((contentKey) => {
+      const contentObj = contentDocsObj[contentKey];
+      Object.keys(contentObj).forEach((docKey) => {
+        const docObj = contentObj[docKey];
         if (docObj.id == id) {
           const mdLink = `/src/documentations/${docObj.source}.md`;
           loadDoc(docsContainer, mdLink);

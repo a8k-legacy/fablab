@@ -25,12 +25,12 @@
   - class
   - attribute
   - methods
-  - ![java](java-components.png)
-  - ![java2](java-components2.png)
+  - ![java](/src/imgs/documontations/challenges/java-components.png)
+  - ![java2](/src/imgs/documontations/challenges/java-components2.png)
 
 ## [Syntax symbols](https://www.udemy.com/course/become-an-android-developer-from-scratch/learn/lecture/1009678#overview)
 
-- ![symbols](symbols.png)
+- ![symbols](/src/imgs/documontations/challenges/symbols.png)
 - case of the writing : how you write variables or methods or any name
   - `camelCase` : small first word `camel` and capital the second one `Case`
   - `PacalCase` : capital each word
@@ -43,8 +43,8 @@
   3. method name, so we can call it
   4. syntax symbols like parenthesis or braces
   5. parameters, these are the inputs to the method
-  - ![method](method.png)
-  - ![method](method2.png)
+  - ![method](/src/imgs/documontations/challenges/method.png)
+  - ![method](/src/imgs/documontations/challenges/method2.png)
 
 ## [Data types and variables](https://www.udemy.com/course/become-an-android-developer-from-scratch/learn/lecture/1009702#overview)
 
@@ -83,9 +83,9 @@
 - if we use pointer it won't be known where is the end of that variable until we put `\n` that's mean the end of that variable, the benefit of pointer that i can use data without copying it
 - ![pointer](/src/imgs/documontations/challenges/pointer.png)
 - there are two different data types
-- ![data](data-types.png)
+- ![data](/src/imgs/documontations/challenges/data-types.png)
 - it is better to reduce the usable memory as possible
-- ![variable](variables.png)
+- ![variable](/src/imgs/documontations/challenges/variables.png)
 
 ## [Reference and null](https://www.udemy.com/course/become-an-android-developer-from-scratch/learn/lecture/1012942#overview)
 

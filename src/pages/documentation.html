@@ -9,16 +9,26 @@
   <body>
     <div class="docs__page__container">
       <!-- Sidebar -->
-      <a class="return__button" href="/index.html"
+      
+      <div class="nav__toggle toggle__docs__links" id="docs-links-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="docs__page__sidebar scroll-1" id="docs-page-sidebar">
+        <a class="return__button" href="/index.html"
         ><button aria-hidden="true">⬅</button></a
       >
-      <div class="docs__page__sidebar">
         <h2>Docs</h2>
+        <div class="nav__close docs__sidebar__close" id="docs-close">
+          <span></span>
+          <span></span>
+        </div>
         <div class="docs-content-links" id="docs-content-links"></div>
       </div>
 
       <!-- Main Content Area -->
-      <div class="docs__page__content" id="docs-page-content">
+      <div class="docs__page__content scroll-2" id="docs-page-content">
         <h1 class="docs__page__content__heading">Documentation</h1>
         <div class="doc__content" id="doc-page-content">
           Select a topic from the sidebar.
@@ -29,4 +39,4 @@
     <script src="/src/js/marked.min.js"></script>
     <script type="module" src="/src/js/docs.js"></script>
   </body>
-</html>
+</html

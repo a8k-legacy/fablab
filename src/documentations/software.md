@@ -1,4 +1,5 @@
 # Softwares
 
-## [Machines Softwares](machine-software.md)
-## [freecad](freecad.md)
+## [Machine Software](#machine_software-100022)
+
+## [FreeCAD](#freecad-100017)

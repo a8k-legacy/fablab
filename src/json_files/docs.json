@@ -1,9 +1,4 @@
 {
-  "fablab_info": {
-    "id": "fablab_info-100001",
-    "title": "FabLab General Info",
-    "source": "fablab-info"
-  },
   "headingDocs": {
     "challenges": {
       "id": "challenges-100002",
@@ -27,7 +22,19 @@
     }
   },
   "contentDocs": {
+    "fablab_info": {
+      "fablab_info": {
+        "id": "fablab_info-100001",
+        "title": "FabLab General Info",
+        "source": "fablab-info"
+      }
+    },
     "challenges": {
+      "challenges": {
+        "id": "challenges-100002",
+        "title": "Challenges",
+        "source": "challenges/new-challenges"
+      },
       "android1": {
         "id": "android1-100006",
         "title": "Android 1 Guide",
@@ -90,6 +97,11 @@
       }
     },
     "inventory": {
+      "inventory": {
+        "id": "inventory-100003",
+        "title": "General Inventory",
+        "source": "inventory/inventory"
+      },
       "components": {
         "id": "components-100018",
         "title": "Components Inventory",
@@ -112,6 +124,16 @@
       }
     },
     "machines": {
+      "machine": {
+        "id": "machine-100004",
+        "title": "Machine Overview",
+        "source": "machine"
+      },
+      "software": {
+        "id": "software-100005",
+        "title": "Software Overview",
+        "source": "software"
+      },
       "machine_software": {
         "id": "machine_software-100022",
         "title": "Machine Software Guide",

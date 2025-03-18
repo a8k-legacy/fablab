@@ -103,13 +103,28 @@ export const createLinks = function (docsUrls, docsLinkContainer) {
   });
 };
 
+marked.use({
+  renderer: {
+    image(href, title, text) {
+      return `<img src="${href}" alt="${text}" title="${
+        title || ""
+      }" loading="lazy">`;
+    },
+  },
+});
+
 async function loadDoc(docsLinksContainer, url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new error("Problem in loading docs data");
+      throw new Error("Problem in loading docs data");
     }
     const markdown = await response.text();
+    if (!docsLinksContainer) {
+      console.error("docsLinksContainer is not found in the DOM.");
+      return;
+    }
+
     docsLinksContainer.innerHTML = marked.parse(markdown);
   } catch (error) {
     console.error(error);

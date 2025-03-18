@@ -33,28 +33,29 @@ navList.addEventListener("click", (e) => {
 });
 
 /*=============== FABLAB INFO POPUP ===============*/
-const popupClose = document.getElementById("popup-close"),
-  infoPopup = document.getElementById("fablab-info-popup"),
-  infoBtn = document.getElementById("fablab-info-btn"),
-  popupOverlay = document.getElementById("popup-overlay");
 
-if (popupClose) {
-  popupClose.addEventListener("click", () => {
-    popupOverlay.classList.add("dnone");
-  });
-}
-if (infoBtn) {
-  infoBtn.addEventListener("click", () => {
-    popupOverlay.classList.remove("dnone");
-  });
-}
-if (popupOverlay) {
-  popupOverlay.addEventListener("click", (e) => {
-    if (e.target == popupOverlay) {
-      popupOverlay.classList.add("dnone");
-    }
-  });
-}
+// const popupClose = document.getElementById("popup-close"),
+//   infoPopup = document.getElementById("fablab-info-popup"),
+//   infoBtn = document.getElementById("fablab-info-btn"),
+//   popupOverlay = document.getElementById("popup-overlay");
+
+// if (popupClose) {
+//   popupClose.addEventListener("click", () => {
+//     popupOverlay.classList.add("dnone");
+//   });
+// }
+// if (infoBtn) {
+//   infoBtn.addEventListener("click", () => {
+//     popupOverlay.classList.remove("dnone");
+//   });
+// }
+// if (popupOverlay) {
+//   popupOverlay.addEventListener("click", (e) => {
+//     if (e.target == popupOverlay) {
+//       popupOverlay.classList.add("dnone");
+//     }
+//   });
+// }
 
 /*=============== Fetching Data ===============*/
 fetchData(teamInfoUrl).then((data) => {

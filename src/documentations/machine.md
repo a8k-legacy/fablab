@@ -1,21 +1,21 @@
 # Machines
 
-## [Laser cutter](machines/laser-cutter.md)
+## [Laser Cutter](#laser_cutter-100024)
 
-`status` : working
+`status`: working
 
-## [3D printer](machines/3d-printer.md)
+## [3D Printer](#3d_printer-100023)
 
-`status` : working
+`status`: working
 
-## [Mono fab](machines/monofab.md)
+## [Monofab](#monofab-100025)
 
-`status` : working
+`status`: working
 
-## [Shopbot](machines/shopbot.md)
+## [ShopBot](#shopbot-100026)
 
-`status` : not working
+`status`: not working
 
-## [Vinyl cutter](machines/vinyl-cutter.md)
+## [Vinyl Cutter](#vinyl_cutter-100027)
 
-`status` : working
+`status`: working

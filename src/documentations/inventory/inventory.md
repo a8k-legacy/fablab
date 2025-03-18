@@ -1,6 +1,9 @@
 # Inventory
 
-## [machines](machine-inven.md)
-## [tools](tools-inven.md)
-## [materials](materials-inven.md)
-## [components](components.md)
+## [Components Inventory](#components-100018)
+
+## [Machine Inventory](#machine_inventory-100019)
+
+## [Materials Inventory](#materials_inventory-100020)
+
+## [Tools Inventory](#tools_inventory-100021)

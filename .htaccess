@@ -1,6 +1,13 @@
+# Enable mod_rewrite
 RewriteEngine On
+
+# Set default home page (optional)
+DirectoryIndex /index.html
 
 # Redirect clean URLs to 'src/pages/' while removing '.html'
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)$ src/pages/$1.html [L]
+RewriteRule ^([^/]+)/?$ src/pages/$1.html [L]
+
+# Prevent direct access to 'src/pages/'
+RewriteRule ^src/pages/ - [F,L]

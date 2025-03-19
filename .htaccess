@@ -2,39 +2,35 @@
   RewriteEngine On
 
   # ======================================================
-  # PART 1: REDIRECT OLD/Ugly URLs TO CLEAN URLs
+  # PART 1: REDIRECT ALL .html REQUESTS TO CLEAN URLs
   # ======================================================
-
-  # 1. Redirect direct access to /src/pages/*.html to clean URLs (e.g., /about)
-  RewriteCond %{THE_REQUEST} /src/pages/([^\s]+)\.html [NC]
-  RewriteRule ^ /%1 [R=301,L]
-
-  # 2. Redirect direct access to *.html files to clean URLs (e.g., /contact.html → /contact)
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-  RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+  # Redirect any direct access to .html files (e.g., /about.html → /about)
+  RewriteCond %{THE_REQUEST} \s/+(.*?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L,NE]
 
   # ======================================================
-  # PART 2: REWRITE CLEAN URLs TO ACTUAL FILES
+  # PART 2: REWRITE CLEAN URLs TO .html FILES IN /src/pages
   # ======================================================
-
-  # 1. Rewrite clean URLs (e.g., /about) to /src/pages/about.html
+  # Serve clean URLs (e.g., /about → /src/pages/about.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^([^/]+)/?$ src/pages/$1.html [L,NC]
 
   # ======================================================
-  # PART 3: ADDITIONAL RULES
+  # PART 3: BLOCK DIRECT ACCESS TO /src/pages AND .html FILES
   # ======================================================
-
-  # Remove trailing slashes (e.g., /about/ → /about)
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} (.+)/$
-  RewriteRule ^ %1 [R=301,L]
-
-  # Block direct access to /src/pages directory
+  # Block access to the /src/pages directory
   RewriteRule ^src/pages/ - [F,L]
 
-  # Block direct access to *.html files (optional)
+  # Block direct access to .html files (optional but recommended)
   RewriteCond %{THE_REQUEST} \.html[\s?] [NC]
   RewriteRule ^ - [F,L]
+
+  # ======================================================
+  # PART 4: REMOVE TRAILING SLASHES
+  # ======================================================
+  # Remove trailing slashes (e.g., /about/ → /about)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/+$
+  RewriteRule ^ %1 [R=301,L,NE]
 </IfModule>

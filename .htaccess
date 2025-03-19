@@ -1,13 +1,20 @@
-# Enable mod_rewrite
-RewriteEngine On
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-# Set default home page (optional)
-DirectoryIndex /index.html
+  # Redirect "/documentation" to the actual file without changing the URL
+  RewriteRule ^documentation/?$ src/pages/documentation.html [L,NC]
 
-# Redirect clean URLs to 'src/pages/' while removing '.html'
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/?$ src/pages/$1.html [L]
+  # Optional: Hide .html extensions for all pages
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.html$ [NC]
+  RewriteRule ^([^/]+)/?$ $1.html [L]
 
-# Prevent direct access to 'src/pages/'
-RewriteRule ^src/pages/ - [F,L]
+  # Block direct access to the /src/pages directory
+  RewriteRule ^src/pages/ - [F,L]
+
+  # Remove trailing slashes (e.g., /documentation/ → /documentation)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [R=301,L]
+</IfModule>

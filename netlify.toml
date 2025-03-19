@@ -1,0 +1,36 @@
+[build]
+  publish = "."  # Root directory is the publish directory
+
+[[headers]]
+  for = "/*"     # Security headers for all paths
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'"
+
+[[redirects]]
+  # Redirect direct access to /src/pages/* → clean URLs (e.g., /documentation)
+  from = "/src/pages/*"
+  to = "/:splat"  # ":splat" captures the wildcard value (e.g., "documentation")
+  status = 301    # Permanent redirect for SEO
+
+[[redirects]]
+  # Redirect direct access to *.html files → clean URLs (e.g., /about.html → /about)
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  # Rewrite clean URLs (e.g., /documentation) to serve files from /src/pages/documentation.html
+  from = "/*"
+  to = "/src/pages/:splat.html"
+  status = 200    # 200 = rewrite (URL stays clean)
+
+[[redirects]]
+  # Fallback for SPAs (optional: only needed if you have client-side routing)
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true    # Override other rules if needed for SPAs

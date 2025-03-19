@@ -1,2 +1,5 @@
-/documentation /src/pages/documentation.html 200
-/*    /index.html    200
+# Redirect direct access to /src/pages/* to clean URLs
+/src/pages/*    /:splat    301
+
+# Rewrite clean URLs to serve files from /src/pages/*.html
+/*              /src/pages/:splat.html   200

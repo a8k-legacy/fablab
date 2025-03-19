@@ -1,6 +1,6 @@
 RewriteEngine On
 
-# Remove 'src/pages/' from the URL and hide '.html'
+# Redirect clean URLs to 'src/pages/' while removing '.html'
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ src/pages/$1.html [L]
+RewriteRule ^([^/]+)$ src/pages/$1.html [L]

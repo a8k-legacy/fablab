@@ -46,12 +46,14 @@ export const createCards = function (cardsContainer, cardInfo) {
 
 export const createDocs = function (cardsContainer, cardInfo) {
   const docObject = cardInfo;
+
+  console.log(docObject);
   const card = `
      <div class="doc-card">
-              <div class="doc__image"><img class="doc__image" src="/src/imgs/documontations/${docObject.docImg}" alt="${docObject.docName} Documentation"></div>
+              <div class="doc__image"><img class="doc__image" src="src/imgs/documentations/${docObject.source}" alt="${docObject.docName} Documentation"></div>
                <div class="doc__content">
                    <h3 class="doc__title">
-                    ${docObject.docName}
+                    ${docObject.title}
                    </h3>
              
                  <p class="doc__desc">

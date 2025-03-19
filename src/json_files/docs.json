@@ -3,22 +3,26 @@
     "challenges": {
       "id": "challenges-100002",
       "title": "Challenges",
-      "source": "challenges/new-challenge"
+      "source": "challenges/new-challenge",
+      "docDesc": ""
     },
     "inventory": {
       "id": "inventory-100003",
       "title": "General Inventory",
-      "source": "inventory/inventory"
+      "source": "inventory/inventory",
+      "docDesc": ""
     },
     "machine": {
       "id": "machine-100004",
       "title": "Machine Overview",
-      "source": "machine"
+      "source": "machine",
+      "docDesc": ""
     },
     "software": {
       "id": "software-100005",
       "title": "Software Overview",
-      "source": "software"
+      "source": "software",
+      "docDesc": ""
     }
   },
   "contentDocs": {

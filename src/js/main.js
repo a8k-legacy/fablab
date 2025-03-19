@@ -9,7 +9,7 @@ const navList = document.getElementById("nav-list"),
   docsCardsContainer = document.getElementById("docs-cards-container");
 
 /*=============== Global Variables ===============*/
-let fetchedTeamData, fetchedDocsData;
+
 const teamInfoUrl = `/src/json_files/team.json`;
 const docsInfoUrl = `/src/json_files/docs.json`;
 
@@ -59,7 +59,7 @@ navList.addEventListener("click", (e) => {
 
 /*=============== Fetching Data ===============*/
 fetchData(teamInfoUrl).then((data) => {
-  fetchedTeamData = data;
+  const fetchedTeamData = data;
   const teamInfo = fetchedTeamData.members;
   const engineerInfo = fetchedTeamData.engineers;
 
@@ -76,10 +76,10 @@ fetchData(teamInfoUrl).then((data) => {
   });
 });
 fetchData(docsInfoUrl).then((data) => {
-  fetchedDocsData = data;
-  console.log(fetchedDocsData);
-  Object.keys(fetchedDocsData).forEach((doc) => {
-    createDocs(docsCardsContainer, fetchedDocsData[doc]);
+  const headingDocsData = data.headingDocs;
+
+  Object.keys(headingDocsData).forEach((docKey) => {
+    createDocs(docsCardsContainer, headingDocsData[docKey]);
   });
 });
 

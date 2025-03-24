@@ -47,11 +47,9 @@ export const createCards = function (cardsContainer, cardInfo) {
 export const createDocs = function (cardsContainer, cardInfo) {
   const docObject = cardInfo;
 
-  console.log(docObject);
   const card = `
      <div class="doc-card">
-              <div class="doc__image"><img class="doc__image" src="src/imgs/documentations/${docObject.source}" alt="${docObject.docName} Documentation"></div>
-               <div class="doc__content">
+             <div class="doc__card__content">
                    <h3 class="doc__title">
                     ${docObject.title}
                    </h3>
@@ -60,8 +58,8 @@ export const createDocs = function (cardsContainer, cardInfo) {
                 ${docObject.docDesc}
                  </p>
              
-                 <a class="doc__more" href="#">
-                   Find out more
+                 <a class="doc__more" href="documentations#${docObject.id}">
+                   Find more
                    <span aria-hidden="true">
                      →
                    </span>
@@ -115,6 +113,9 @@ marked.use({
   },
 });
 
+let timeoutId;
+
+// converting docs content from md to html
 async function loadDoc(docsLinksContainer, url) {
   try {
     const response = await fetch(url);
@@ -127,13 +128,32 @@ async function loadDoc(docsLinksContainer, url) {
       return;
     }
 
-    docsLinksContainer.innerHTML = marked.parse(markdown);
+    const htmlContent = marked.parse(markdown);
+    docsLinksContainer.innerHTML = "";
+
+    // Showing content as typing machine writing
+    let index = 0;
+    let chunkSize = 10; // Adjust the chunk size for better performance
+    function showNextChunk() {
+      if (index < htmlContent.length) {
+        docsLinksContainer.innerHTML = htmlContent.slice(0, index + chunkSize);
+        index += chunkSize;
+
+        // timing for showing letters
+        timeoutId = setTimeout(showNextChunk, 30);
+      }
+    }
+
+    showNextChunk();
   } catch (error) {
     console.error(error);
   }
 }
 
 export const getDocById = function (docsContainer, docsUrl, id) {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
   fetchData(docsUrl).then((docsUrls) => {
     const contentDocsObj = docsUrls.contentDocs;
     Object.keys(contentDocsObj).forEach((contentKey) => {
